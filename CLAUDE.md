@@ -98,23 +98,44 @@ Warm, family-friendly, authentic, rustic, welcoming — "home cooking from a Mex
 
 ### Photography / Images
 
-**Provided (Round 1):**
+**Provided (Round 1 — food & drinks):**
 | File | Subject | Use |
 |------|---------|-----|
-| beef-fajitas.jpg | Beef fajitas on sizzling cast iron skillet with bell peppers & onions; side of rice, beans, guacamole, pico, sour cream | Hero image candidate, Fajitas menu section |
-| cocktails.jpg | Classic margarita on rocks (lime, salt rim) + frozen strawberry margarita (sugar rim, lemon) on rustic wood table | Drinks section, Hero section lifestyle |
+| beef-fajitas.jpg | Beef fajitas on sizzling cast iron skillet with bell peppers & onions; side of rice, beans, guacamole, pico, sour cream | **Hero image (primary)**, Fajitas menu section |
+| cocktails.jpg | Classic margarita on rocks (lime, salt rim) + frozen strawberry margarita (sugar rim, lemon) on rustic wood table | Drinks section, lifestyle |
 | beers.jpg | Coors Light, Modelo Negra, Corona Extra, Dos Equis, Modelo Especial on rustic wood table | Drinks/Bar section |
-| taquitos.jpg | Crispy taquitos with green tomatillo sauce, sour cream drizzle, avocado slices, pico de gallo, rice and refried beans | Appetizers / A La Carte section |
-| shrimp-fajitas.jpg | Shrimp fajitas on cast iron with melted white cheese, grilled veggies; side of rice, beans, guacamole, pico | Fajitas menu section |
+| taquitos.jpg | Crispy rolled taquitos/flautas with green tomatillo sauce, sour cream drizzle, avocado slices, pico, rice and refried beans | Appetizers section |
+| shrimp-fajitas.jpg | Shrimp fajitas on cast iron with melted white cheese, grilled veggies; side of rice, beans, guacamole, pico | Fajitas section |
+
+**Provided (Round 2 — team & food):**
+| File | Subject | Use |
+|------|---------|-----|
+| team-photo.jpg | Full staff group photo inside Angel Fire location (~13 people); Ruben Moreno far left; warm interior, Christmas tree in background | About page — Team section |
+| family-photo.jpg | Ruben Moreno with family (4 people) behind bar/counter; colorful serape runner; Red River location interior | About page — Family/Hero section |
+| chile-rellenos.jpg | Two hand-battered poblano peppers (Chile Rellenos) with rice, refried beans, and fresh pico salad | Plate Specials section |
+| logo-red-river.jpg | La Finca de Villa 2 logo — same wooden gate style, red chili ristras, green bowl icon | Red River location card |
+
+**Logo:**
+| File | Subject | Use |
+|------|---------|-----|
+| logo.png | Main La Finca de Villa logo — wooden gate arch, chili ristras, green bowl | Navigation, footer, hero |
 
 **Drinks confirmed from photos:**
-- Margaritas (classic and frozen/flavored)
-- Coors Light, Modelo Negra, Modelo Especial, Corona Extra, Dos Equis (XX)
+- Margaritas: Classic on the rocks + frozen/flavored (strawberry confirmed)
+- Beer: Coors Light, Modelo Negra, Modelo Especial, Corona Extra, Dos Equis (XX)
 
-**Still needed:**
-- Interior/exterior photos of both locations
-- Additional food photography (enchiladas, desserts, kids meals, etc.)
-- Menu image assets from Mi Cocina Mexicana era (provided separately)
+**Photo Placeholders Needed (suggestions for client):**
+| Placeholder | Suggested Content |
+|-------------|------------------|
+| exterior-angel-fire.jpg | Exterior storefront of 12 Crestview Dr — signage, entrance |
+| exterior-red-river.jpg | Exterior of Lifts West Hotel showing La Finca de Villa 2 entrance |
+| interior-angel-fire.jpg | Dining room atmosphere — tables, decor, warm lighting |
+| interior-red-river.jpg | Red River dining room — colorful window treatments, bar area |
+| enchiladas.jpg | Enchiladas Bandera or El Chef Enchiladas — great visual variety |
+| dessert.jpg | Sopapillas or Mexican Fried Ice Cream |
+| chips-salsa.jpg | Chips-N-Salsa in rustic bowl on the wood tables |
+| angle-fire-mountain.jpg | Mountain scenery near Angel Fire (ski slopes, trails) |
+| red-river-mountain.jpg | Mountain scenery near Red River (Lifts West exterior) |
 
 ---
 
@@ -307,16 +328,44 @@ Warm, family-friendly, authentic, rustic, welcoming — "home cooking from a Mex
 
 ---
 
-## Website Requirements
+## Website — Built Files
+
+Static HTML/CSS prototype built as Webflow design reference. All files in repo root.
+
+| File | Description |
+|------|-------------|
+| `index.html` | Home page — hero, story snippet, featured dishes, hours, catering banner, team glimpse, social links |
+| `menu.html` | Full menu (no prices) — all categories, sticky sub-nav, catering section |
+| `about.html` | Our Story — Moreno family history, values, team photo, Red River expansion |
+| `locations.html` | Find Us — both locations, hours table, Google Maps placeholders, social/contact cards |
+| `gallery.html` | Gallery — 6 real photos + 8 labeled placeholders with suggested content |
+| `css/style.css` | Full stylesheet — brand colors, typography, responsive grid, all page styles |
+| `js/main.js` | Mobile nav toggle, menu sub-nav active state, scroll fade-in, parallax hero |
+| `images/` | Image assets directory (drop photos here matching filenames referenced in HTML) |
+
+**Image filenames expected in `/images/`:**
+- `logo.png` — main logo
+- `logo-red-river.jpg` — La Finca de Villa 2 logo
+- `beef-fajitas.jpg`
+- `shrimp-fajitas.jpg`
+- `chile-rellenos.jpg`
+- `taquitos.jpg`
+- `cocktails.jpg`
+- `beers.jpg`
+- `family-photo.jpg`
+- `team-photo.jpg`
+
+**Google Maps embeds:** Placeholders are in `locations.html`. Once Google Business is claimed/verified, replace placeholder divs with `<iframe>` embed code from Google Maps → Share → Embed.
+
+## Website Requirements (Webflow)
 - **Platform**: Webflow
 - **Key Pages**:
-  - Home
-  - Menu
-  - Locations (with maps for both)
-  - About Us / Our Story
-  - Contact / Hours
-  - Gallery (optional)
-  - Online Ordering / Reservations (if applicable)
+  - Home ✓
+  - Menu (no pricing) ✓
+  - Locations (Google Maps placeholders) ✓
+  - About Us / Our Story ✓
+  - Gallery (placeholders with suggestions) ✓
+  - Online Ordering / Reservations — TBD (not yet implemented)
 
 ---
 
