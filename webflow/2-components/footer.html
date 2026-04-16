@@ -1,0 +1,150 @@
+<!--
+  ============================================================
+  LA FINCA DE VILLA — Footer Component
+  ============================================================
+  BUILD IN WEBFLOW:
+  Add a Section at the bottom of every page.
+  Create a Symbol so it stays in sync across all pages.
+  Navigator: Footer Section → Container → Footer Grid (4 cols)
+
+  To create a Symbol: Right-click the footer section → Create Symbol → "Footer"
+  ============================================================
+-->
+
+<footer class="footer" style="
+  background-color: #004D35;
+  color: #FFFFFF;
+  padding: 3.5rem 0 1.5rem;
+  border-top: 3px solid #CE1126;
+">
+  <div class="container" style="max-width: 1160px; margin: 0 auto; padding: 0 1.5rem;">
+
+    <!-- 4-column grid -->
+    <div class="footer__grid" style="
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    ">
+
+      <!-- Col 1: Brand -->
+      <div class="footer__brand">
+        <img src="../images/logo.png" alt="La Finca de Villa" style="height: 72px; width: auto; margin-bottom: 1rem;">
+        <p class="footer__tagline" style="
+          font-family: 'Dancing Script', cursive;
+          font-size: 1.1rem;
+          color: #C8972A;
+          margin: 0;
+        ">Where the mountains meet Mexico</p>
+      </div>
+
+      <!-- Col 2: Angel Fire -->
+      <div class="footer__location">
+        <h4 style="color: #C8972A; font-size: .95rem; margin-bottom: .75rem; letter-spacing: .04em; font-family: 'Playfair Display', serif;">Angel Fire</h4>
+        <p style="color: #F0FAF5; font-size: .875rem; line-height: 1.7; margin-bottom: .4rem;">12 Crestview Drive, Suite 11-E<br>Angel Fire, NM 87710</p>
+        <p style="font-size: .875rem; margin: 0;"><a href="tel:+15752401186" style="color: #F0FAF5;">(575) 240-1186</a></p>
+      </div>
+
+      <!-- Col 3: Red River -->
+      <div class="footer__location">
+        <h4 style="color: #C8972A; font-size: .95rem; margin-bottom: .75rem; letter-spacing: .04em; font-family: 'Playfair Display', serif;">Red River</h4>
+        <p style="color: #F0FAF5; font-size: .875rem; line-height: 1.7; margin-bottom: .4rem;">201 W. Main Street<br>Lifts West Hotel<br>Red River, NM 87558</p>
+        <p style="font-size: .875rem; margin: 0;"><a href="tel:+15057800881" style="color: #F0FAF5;">(505) 780-0881</a></p>
+      </div>
+
+      <!-- Col 4: Hours + Social -->
+      <div class="footer__hours">
+        <h4 style="color: #C8972A; font-size: .95rem; margin-bottom: .75rem; letter-spacing: .04em; font-family: 'Playfair Display', serif;">Hours</h4>
+        <p style="color: #F0FAF5; font-size: .875rem; line-height: 1.7; margin-bottom: .4rem;">Open 7 days a week<br>11:00 am – 8:00 pm</p>
+        <p style="color: #F0FAF5; font-size: .8rem; font-style: italic; margin-bottom: 1rem;">Tortilla Soup — Wed only<br>Mexican Soup — Fri only</p>
+        <!-- Social icons -->
+        <div style="display: flex; gap: .75rem;">
+          <a href="https://www.instagram.com/lafincadevilla/" target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram"
+             style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.12); color:#fff; font-size:1rem; transition: background .3s;">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100083762870185" target="_blank" rel="noopener noreferrer"
+             aria-label="Facebook"
+             style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.12); color:#fff; font-size:1rem; transition: background .3s;">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- end footer__grid -->
+
+    <!-- Bottom bar -->
+    <div style="border-top: 1px solid rgba(255,255,255,.12); padding-top: 1.25rem; text-align: center; font-size: .8rem; color: rgba(255,255,255,.4);">
+      <p style="margin: 0; max-width: 100%;">&copy; 2026 La Finca de Villa &mdash; Angel Fire &amp; Red River, New Mexico. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+
+<!--
+  ============================================================
+  WEBFLOW CLASS STYLES TO CREATE
+  ============================================================
+
+  CLASS: footer  (Section element)
+  ─────────────────────────────────────────
+  Background:        Green Dark (#004D35)
+  Color:             White
+  Padding:           56px 0 24px
+  Border Top:        3px solid Red (#CE1126)
+
+  CLASS: footer__grid  (Div Block inside Container)
+  ─────────────────────────────────────────
+  Display:           Grid
+  Template Columns:  2fr 1fr 1fr 1fr
+  Gap:               40px
+  Margin Bottom:     40px
+  Tablet breakpoint: 2 columns (1fr 1fr)
+  Mobile breakpoint: 1 column
+
+  CLASS: footer__tagline  (Text Block)
+  ─────────────────────────────────────────
+  Font:              Dancing Script 600, 1.1rem
+  Color:             Gold (#C8972A)
+
+  CLASS: footer-heading  (use on all 4 column h4 elements)
+  ─────────────────────────────────────────
+  Font:              Playfair Display 400, 0.95rem
+  Color:             Gold (#C8972A)
+  Letter Spacing:    0.04em
+  Margin Bottom:     12px
+
+  CLASS: footer-text  (use on all footer paragraphs)
+  ─────────────────────────────────────────
+  Color:             #F0FAF5 (BG Tint)
+  Font Size:         0.875rem
+  Line Height:       1.7
+  Max Width:         none (override global p max-width)
+
+  CLASS: footer-link  (all <a> inside footer)
+  ─────────────────────────────────────────
+  Color:             #F0FAF5
+  Hover Color:       Gold (#C8972A)
+
+  CLASS: social-icon  (Div Block, circle)
+  ─────────────────────────────────────────
+  Display:           Flex, center/center
+  Width / Height:    36px
+  Border Radius:     50%
+  Background:        rgba(255,255,255,0.12)
+  Color:             White
+  Hover Background:  Red (#CE1126)
+  Font Size:         1rem
+  Transition:        background .3s
+
+  CLASS: footer__bottom  (Div Block)
+  ─────────────────────────────────────────
+  Border Top:        1px solid rgba(255,255,255,0.12)
+  Padding Top:       20px
+  Text Align:        Center
+  Font Size:         0.8rem
+  Color:             rgba(255,255,255,0.4)
+  ============================================================
+-->

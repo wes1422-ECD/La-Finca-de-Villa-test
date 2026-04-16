@@ -1,0 +1,70 @@
+<!--
+  ============================================================
+  LA FINCA DE VILLA — Webflow Project Settings
+  Paste this into: Project Settings → Custom Code → Head Code
+  ============================================================
+-->
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome (icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Design Tokens -->
+<style>
+:root {
+  /* ── Brand Colors ── */
+  --green-dark:   #004D35;   /* nav, footer, dark section backgrounds */
+  --green-mid:    #006847;   /* menu sub-nav, borders, hover states */
+  --green-light:  #2E8B57;   /* icon accents, mild highlights */
+  --red:          #CE1126;   /* primary buttons, tags, icon accents */
+  --red-dark:     #A80D1E;   /* button hover */
+  --gold:         #C8972A;   /* taglines, headings on dark bg, sub-labels */
+
+  /* ── Page Backgrounds ── */
+  --bg-white:     #FFFFFF;
+  --bg-tint:      #F0FAF5;   /* alternating section tint */
+  --bg-border:    #D4EDDA;   /* dividers, card borders */
+
+  /* ── Typography ── */
+  --text-dark:    #111111;
+  --text-mid:     #333333;
+  --text-light:   #666666;
+
+  /* ── Overlays ── */
+  --overlay:      rgba(0, 30, 15, 0.70);   /* hero image overlay */
+
+  /* ── Spacing & Shape ── */
+  --radius:   8px;
+  --max-w:    1160px;
+  --nav-h:    80px;
+}
+
+/* Base resets — Webflow adds some of these, but this ensures consistency */
+*, *::before, *::after { box-sizing: border-box; }
+body { font-family: 'Lato', Arial, sans-serif; color: var(--text-mid); }
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--text-dark); line-height: 1.2; }
+h1 { font-size: clamp(2rem,   5vw, 3.5rem); }
+h2 { font-size: clamp(1.6rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.15rem, 2.5vw, 1.5rem); }
+p  { line-height: 1.7; }
+a  { text-decoration: none; color: inherit; }
+
+/* Section label (Dancing Script red accent) */
+.section-label {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  color: var(--red);
+  display: block;
+  margin-bottom: .4rem;
+}
+/* On dark backgrounds override to gold */
+.on-dark .section-label { color: var(--gold); }
+
+/* Utility shadows */
+.shadow-sm { box-shadow: 0 2px 8px  rgba(0,0,0,.10); }
+.shadow-md { box-shadow: 0 4px 20px rgba(0,0,0,.16); }
+</style>

@@ -1,0 +1,120 @@
+<!--
+  ============================================================
+  LA FINCA DE VILLA — Webflow Project Settings
+  Paste this into: Project Settings → Custom Code → Footer Code
+  (runs before </body> on every page)
+  ============================================================
+-->
+
+<script>
+/* ============================================================
+   MOBILE NAV TOGGLE
+   Target: Webflow's built-in Navbar component handles mobile
+   menus natively — no custom JS needed for the hamburger.
+   This script handles two things Webflow doesn't do by default:
+
+   1. Lock body scroll when mobile menu is open
+   2. Close menu when a nav link is clicked (for same-page anchors)
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Webflow's navbar open/close class is 'w--open' on the menu button
+  const navMenu  = document.querySelector('.w-nav-menu');
+  const navBtn   = document.querySelector('.w-nav-button');
+
+  if (navBtn && navMenu) {
+    // Observe class changes to lock/unlock scroll
+    const mo = new MutationObserver(() => {
+      const isOpen = navBtn.classList.contains('w--open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    mo.observe(navBtn, { attributes: true, attributeFilter: ['class'] });
+
+    // Close menu on nav link click (useful for single-page anchor jumps)
+    navMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        if (navBtn.classList.contains('w--open')) {
+          navBtn.click(); // Webflow toggles menu on button click
+        }
+      });
+    });
+  }
+
+
+  /* ============================================================
+     MENU PAGE — Sticky sub-nav active state
+     Only runs on menu.html (looks for .menu-nav element)
+     ============================================================ */
+  const menuSections = document.querySelectorAll('.menu-body section[id]');
+  const menuNavLinks = document.querySelectorAll('.menu-nav__list a');
+
+  if (menuSections.length && menuNavLinks.length) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          menuNavLinks.forEach(a => a.classList.remove('is-active'));
+          const active = document.querySelector(`.menu-nav__list a[href="#${entry.target.id}"]`);
+          if (active) {
+            active.classList.add('is-active');
+            active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
+        }
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+
+    menuSections.forEach(s => observer.observe(s));
+  }
+
+
+  /* ============================================================
+     SMOOTH SCROLL — anchor links with offset for sticky nav
+     ============================================================ */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const navH      = document.querySelector('.w-nav')?.offsetHeight || 80;
+        const menuNavH  = document.querySelector('.menu-nav')?.offsetHeight || 0;
+        window.scrollTo({ top: target.offsetTop - navH - menuNavH - 16, behavior: 'smooth' });
+      }
+    });
+  });
+
+
+  /* ============================================================
+     HERO PARALLAX  (home page only — looks for .hero__bg)
+     ============================================================ */
+  const heroBg = document.querySelector('.hero__bg');
+  if (heroBg) {
+    window.addEventListener('scroll', () => {
+      heroBg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+    }, { passive: true });
+  }
+
+
+  /* ============================================================
+     FADE-IN ON SCROLL
+     Add class "fade-up" to any element in Webflow to animate it
+     ============================================================ */
+  const fadeEls = document.querySelectorAll('.fade-up');
+  if ('IntersectionObserver' in window && fadeEls.length) {
+    fadeEls.forEach(el => {
+      el.style.opacity  = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+    });
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity   = '1';
+          entry.target.style.transform = 'translateY(0)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    fadeEls.forEach(el => io.observe(el));
+  }
+
+});
+</script>

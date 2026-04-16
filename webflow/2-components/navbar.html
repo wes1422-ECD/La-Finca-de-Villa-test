@@ -1,0 +1,119 @@
+<!--
+  ============================================================
+  LA FINCA DE VILLA — Navbar Component
+  ============================================================
+  BUILD IN WEBFLOW:
+  Use Webflow's built-in Navbar element (Add Panel → Navbar).
+  Configure it as follows, then apply the styles below.
+
+  WEBFLOW NAVBAR SETTINGS:
+  - Animation: Over Right (or Over Left)
+  - Duration: 300ms
+  - Easing: ease
+  - Nav links: add as Nav Link elements inside the nav menu
+  - Logo: Nav Brand element — insert an Image block (logo.png)
+
+  STICKY BEHAVIOR:
+  Navigator → Navbar → Position: Sticky Top
+  ============================================================
+-->
+
+<!-- REFERENCE HTML (mirrors what Webflow will generate) -->
+<nav class="navbar w-nav" style="
+  background-color: #004D35;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,.16);
+">
+  <div class="navbar__container w-container" style="
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  ">
+
+    <!-- Logo (Nav Brand) -->
+    <a href="/index" class="navbar__brand w-nav-brand" aria-label="La Finca de Villa — Home">
+      <img src="../images/logo.png" alt="La Finca de Villa" style="height: 56px; width: auto;">
+    </a>
+
+    <!-- Nav Menu -->
+    <nav class="navbar__menu w-nav-menu" style="display: flex; gap: 2rem; align-items: center;">
+      <a href="/index"     class="nav-link w-nav-link">Home</a>
+      <a href="/menu"      class="nav-link w-nav-link">Menu</a>
+      <a href="/our-story" class="nav-link w-nav-link">Our Story</a>
+      <a href="/find-us"   class="nav-link w-nav-link">Find Us</a>
+      <a href="/gallery"   class="nav-link w-nav-link">Gallery</a>
+    </nav>
+
+    <!-- Hamburger (Menu Button — Webflow renders this automatically) -->
+    <div class="w-nav-button" aria-label="Toggle menu">
+      <div class="w-icon-nav-menu"></div>
+    </div>
+
+  </div>
+</nav>
+
+
+<!--
+  ============================================================
+  WEBFLOW CLASS STYLES TO CREATE
+  ============================================================
+
+  CLASS: navbar
+  ─────────────────────────────────────────
+  Background Color:  Green Dark (#004D35)
+  Height:            80px
+  Position:          Sticky  Top: 0px
+  Z-Index:           1000
+  Box Shadow:        0 4px 20px rgba(0,0,0,0.16)
+
+  CLASS: navbar__container
+  ─────────────────────────────────────────
+  Max Width:         1160px
+  Margin:            Auto (left & right)
+  Padding:           0 24px
+  Height:            100%
+  Display:           Flex
+  Align Items:       Center
+  Justify Content:   Space Between
+
+  CLASS: navbar__brand  (Nav Brand element)
+  ─────────────────────────────────────────
+  Image height:      56px
+  Width:             Auto
+
+  CLASS: nav-link  (on all Nav Link elements)
+  ─────────────────────────────────────────
+  Font:              Lato, 700, 0.875rem
+  Color:             White (#FFFFFF)
+  Letter Spacing:    0.08em
+  Text Transform:    Uppercase
+  Padding Bottom:    4px
+  Border Bottom:     2px solid transparent
+  Transition:        All 0.3s ease
+
+  CLASS: nav-link (Current state — Webflow auto-applies)
+  ─────────────────────────────────────────
+  Color:             Gold (#C8972A)
+  Border Bottom:     2px solid #C8972A
+
+  CLASS: nav-link:hover
+  ─────────────────────────────────────────
+  Color:             Gold (#C8972A)
+  Border Bottom:     2px solid #C8972A
+
+  MOBILE MENU PANEL (set in Navbar settings)
+  ─────────────────────────────────────────
+  Background:        Green Dark (#004D35)
+  Padding:           32px 24px
+  Nav links mobile:  Font size 1.1rem, gap 1.5rem
+
+  HAMBURGER ICON COLOR: White (#FFFFFF)
+  ============================================================
+-->

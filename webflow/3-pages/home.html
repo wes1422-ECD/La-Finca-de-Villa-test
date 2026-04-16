@@ -1,0 +1,407 @@
+<!--
+  ============================================================
+  LA FINCA DE VILLA — Home Page (index)
+  Webflow Build Reference
+  ============================================================
+  PAGE SETTINGS (Webflow Page Settings panel):
+    Title:       La Finca de Villa | Authentic Mexican Restaurant | Angel Fire & Red River, NM
+    Description: La Finca de Villa — Authentic family-owned Mexican restaurant in Angel Fire
+                 and Red River, New Mexico. Open daily 11am–8pm. Where the mountains meet Mexico.
+    OG Image:    beef-fajitas.jpg
+    Slug:        /  (home page)
+  ============================================================
+
+  PAGE STRUCTURE (Navigator order):
+  ─────────────────────────────────────────────────────
+  Navbar Symbol
+  Section.hero
+  Section.story-snippet
+  Section.featured
+  Section.locations-preview
+  Section.catering-banner
+  Section.team-glimpse
+  Section.social-cta
+  Footer Symbol
+  ─────────────────────────────────────────────────────
+-->
+
+
+<!-- ============================================================
+     SECTION 1 — HERO
+     Webflow element: Section
+     ============================================================
+     LAYOUT:
+       Section.hero
+         Div.hero__bg          ← background image div (not an Image element)
+         Div.hero__overlay     ← dark tint layer
+         Div.hero__content     ← centered content
+
+     WEBFLOW TIPS:
+     - Set hero__bg as a Div Block with Background Image (beef-fajitas.jpg)
+       Cover, Center Center, Fixed attachment
+     - Set hero__overlay as absolute Div Block, full inset, z-index 1
+     - Set hero__content as relative Div Block, z-index 2, centered
+     ============================================================ -->
+
+<section class="hero" style="
+  position: relative;
+  height: 100vh; min-height: 620px;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+">
+
+  <!-- Background image layer -->
+  <div class="hero__bg" style="
+    position: absolute; inset: 0;
+    background-image: url('images/beef-fajitas.jpg');
+    background-size: cover; background-position: center; background-attachment: fixed;
+  "></div>
+
+  <!-- Overlay -->
+  <div style="position: absolute; inset: 0; background: rgba(0,30,15,0.70); z-index: 1;"></div>
+
+  <!-- Content -->
+  <div style="position: relative; z-index: 2; padding: 1.5rem; max-width: 800px;">
+    <img src="images/logo.png" alt="La Finca de Villa" style="height: 180px; width: auto; margin: 0 auto 1.5rem; display: block; filter: drop-shadow(0 4px 20px rgba(0,0,0,.6));">
+
+    <p style="
+      font-family: 'Dancing Script', cursive; font-size: clamp(1.4rem, 4vw, 2.2rem);
+      color: #FFFFFF; margin-bottom: 2rem; text-shadow: 0 2px 8px rgba(0,0,0,.5);
+    ">Where the mountains meet Mexico</p>
+
+    <!-- CTA Buttons -->
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+      <a href="/menu" class="btn-primary">
+        <i class="fas fa-utensils"></i> View Our Menu
+      </a>
+      <a href="/find-us" class="btn-outline">
+        <i class="fas fa-map-marker-alt"></i> Find Us
+      </a>
+    </div>
+
+    <p style="color: rgba(255,255,255,.75); font-size: .875rem; letter-spacing: .08em; text-transform: uppercase;">
+      Open Daily &nbsp;·&nbsp; 11:00 am – 8:00 pm &nbsp;·&nbsp; Angel Fire &amp; Red River, NM
+    </p>
+  </div>
+</section>
+
+<!--
+  HERO CLASS STYLES:
+  ──────────────────────────────────────────
+  CLASS: hero__bg
+    Position: Absolute, inset 0
+    Background: Image (beef-fajitas.jpg), Cover, Center, Fixed
+    Z-Index: 0
+
+  CLASS: btn-primary  (reuse across all pages)
+    Display: Inline Flex, gap 8px, center
+    Padding: 14px 32px
+    Background: Red (#CE1126)
+    Color: White
+    Border Radius: 8px
+    Font: Lato 700, 0.875rem, uppercase, 0.06em spacing
+    Border: 2px solid Red
+    Hover → Background: Red Dark (#A80D1E)
+
+  CLASS: btn-outline  (white outline, for dark backgrounds)
+    Same as btn-primary but:
+    Background: Transparent
+    Color: White
+    Border: 2px solid White
+    Hover → Background: White, Color: Green Dark (#004D35)
+-->
+
+
+<!-- ============================================================
+     SECTION 2 — STORY SNIPPET  (dark green background)
+     ============================================================ -->
+
+<section style="background: #004D35; padding: 5rem 0;">
+  <div style="max-width: 760px; margin: 0 auto; padding: 0 1.5rem; text-align: center;">
+
+    <span style="font-family: 'Dancing Script', cursive; font-size: 1.2rem; color: #C8972A; display: block; margin-bottom: .4rem;">
+      Family Owned &amp; Operated Since 2022
+    </span>
+
+    <h2 style="color: #FFFFFF; margin: .5rem 0 1.25rem;">
+      A family recipe for every mountain moment
+    </h2>
+
+    <p style="color: #F0FAF5; margin: 0 auto 2rem; max-width: 68ch; line-height: 1.7;">
+      La Finca de Villa brings the warmth of a Mexican family kitchen to the mountains of northern New Mexico. Owner Ruben Moreno grew up in Juárez, Chihuahua, learning authentic recipes from his mother. Every dish reflects the culinary heritage of both Northern and Southern Mexico — fresh, homemade, and made with heart.
+    </p>
+
+    <a href="/our-story" class="btn-text-gold">Read Our Story &rarr;</a>
+
+  </div>
+</section>
+
+<!--
+  CLASS: btn-text-gold  (text-only button for dark sections)
+    Background: None
+    Color: Gold (#C8972A)
+    Font: Lato 700, 0.875rem, uppercase
+    Hover Color: White (#FFFFFF)
+    Padding: 0
+-->
+
+
+<!-- ============================================================
+     SECTION 3 — FEATURED DISHES  (white background)
+     ============================================================ -->
+
+<section style="background: #FFFFFF; padding: 5rem 0;">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 0 1.5rem;">
+
+    <!-- Section header -->
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-label">From Our Kitchen</span>
+      <h2>House Favorites</h2>
+      <p style="color: #333333; margin: .75rem auto 0; max-width: 68ch;">
+        Authentic, homemade dishes crafted with fresh ingredients and traditional flavors.
+      </p>
+    </div>
+
+    <!-- 4-card grid -->
+    <div class="dish-grid">
+
+      <!-- Card 1 -->
+      <div class="dish-card fade-up">
+        <div class="dish-card__img" style="background-image: url('images/beef-fajitas.jpg');"></div>
+        <div class="dish-card__body">
+          <h3>Beef Fajitas</h3>
+          <p>Charbroiled beef on a sizzling cast iron skillet with bell peppers, onions, rice, beans, guacamole &amp; pico de gallo.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="dish-card fade-up">
+        <div class="dish-card__img" style="background-image: url('images/shrimp-fajitas.jpg');"></div>
+        <div class="dish-card__body">
+          <h3>Shrimp Fajitas</h3>
+          <p>Jumbo shrimp on a sizzling skillet with grilled veggies, melted white cheese, rice, beans &amp; fresh guacamole.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="dish-card fade-up">
+        <div class="dish-card__img" style="background-image: url('images/chile-rellenos.jpg');"></div>
+        <div class="dish-card__body">
+          <h3>Chile Rellenos</h3>
+          <p>Two hand-battered poblano peppers, lightly fried to perfection, served with rice, beans &amp; fresh pico salad.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="dish-card fade-up">
+        <div class="dish-card__img" style="background-image: url('images/cocktails.jpg');"></div>
+        <div class="dish-card__body">
+          <h3>Margaritas</h3>
+          <p>Classic on the rocks or frozen and fruity — handcrafted margaritas to complement every meal.</p>
+        </div>
+      </div>
+
+    </div><!-- end dish-grid -->
+
+    <div style="text-align: center; margin-top: 2.5rem;">
+      <a href="/menu" class="btn-primary">See Full Menu</a>
+    </div>
+
+  </div>
+</section>
+
+<!--
+  CLASS: dish-grid
+    Display: Grid
+    Template Columns: repeat(auto-fill, minmax(260px, 1fr))
+    Gap: 1.75rem
+    Margin Bottom: 2.5rem
+
+  CLASS: dish-card
+    Background: White
+    Border Radius: 8px
+    Overflow: Hidden
+    Box Shadow: Shadow SM
+    Hover → Box Shadow: Shadow MD, Transform: translateY(-4px)
+    Transition: all 0.3s ease
+
+  CLASS: dish-card__img  (Div Block, not Image element)
+    Height: 220px
+    Background: Image (set inline per card), Cover, Center
+    Background Color fallback: #F0FAF5
+
+  CLASS: dish-card__body  (Div Block)
+    Padding: 20px
+    h3 inside: Text Dark (#111111), 1.1rem, margin-bottom 8px
+    p inside: Text Mid (#333333), 0.9rem, max-width none
+-->
+
+
+<!-- ============================================================
+     SECTION 4 — LOCATIONS PREVIEW  (green tint background)
+     ============================================================ -->
+
+<section style="background: #F0FAF5; padding: 5rem 0;">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 0 1.5rem;">
+
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-label">Two Locations</span>
+      <h2>Find Your Mountain Kitchen</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+
+      <!-- Angel Fire card -->
+      <div class="location-card fade-up">
+        <div style="font-size: 2rem; color: #CE1126; margin-bottom: 1rem;"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Angel Fire</h3>
+        <p>12 Crestview Drive, Suite 11-E<br>Angel Fire, NM 87710</p>
+        <p style="margin: .75rem 0; font-weight: 700;"><a href="tel:+15752401186" style="color: #CE1126;">(575) 240-1186</a></p>
+        <p style="color: #666666; font-size: .875rem; margin-bottom: 1.5rem;">Open Daily &nbsp;·&nbsp; 11:00 am – 8:00 pm</p>
+        <a href="/find-us#angel-fire" class="btn-outline-dark">Get Directions</a>
+      </div>
+
+      <!-- Red River card -->
+      <div class="location-card fade-up">
+        <div style="font-size: 2rem; color: #CE1126; margin-bottom: 1rem;"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Red River</h3>
+        <p>201 W. Main Street<br>Inside Lifts West Resort Hotel<br>Red River, NM 87558</p>
+        <p style="margin: .75rem 0; font-weight: 700;"><a href="tel:+15057800881" style="color: #CE1126;">(505) 780-0881</a></p>
+        <p style="color: #666666; font-size: .875rem; margin-bottom: 1.5rem;">Open Daily &nbsp;·&nbsp; 11:00 am – 8:00 pm</p>
+        <a href="/find-us#red-river" class="btn-outline-dark">Get Directions</a>
+      </div>
+
+    </div>
+
+    <p style="text-align: center; margin-top: 1.75rem; font-size: .9rem; color: #666666; font-style: italic;">
+      <i class="fas fa-info-circle"></i>&nbsp; Tortilla Soup available Wednesdays &nbsp;·&nbsp; Mexican Soup available Fridays
+    </p>
+
+  </div>
+</section>
+
+<!--
+  CLASS: location-card
+    Background: White
+    Padding: 2rem
+    Border Radius: 8px
+    Text Align: Center
+    Box Shadow: Shadow SM
+
+  CLASS: btn-outline-dark  (dark outline button for light backgrounds)
+    Background: Transparent
+    Color: Green Dark (#004D35)
+    Border: 2px solid #004D35
+    Border Radius: 8px
+    Padding: 14px 32px
+    Font: Lato 700, 0.875rem, uppercase
+    Hover → Background: #004D35, Color: White
+-->
+
+
+<!-- ============================================================
+     SECTION 5 — CATERING BANNER  (red background)
+     ============================================================ -->
+
+<section style="background: #CE1126; padding: 4rem 0;">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 0 1.5rem;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+
+      <div>
+        <h2 style="color: #FFFFFF; margin-bottom: .5rem;">Feeding a crowd?</h2>
+        <p style="color: rgba(255,255,255,.85); max-width: 54ch; margin: 0; line-height: 1.7;">
+          Our Parties To-Go packages serve 10 people with fajitas, burritos, enchiladas, tacos &amp; more — perfect for family gatherings, group ski trips, and celebrations.
+        </p>
+      </div>
+
+      <a href="/menu#catering" class="btn-outline">See Catering Options</a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 6 — TEAM GLIMPSE  (white background, 2-col)
+     ============================================================ -->
+
+<section style="background: #FFFFFF; padding: 5rem 0;">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 0 1.5rem;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+
+      <!-- Image -->
+      <div>
+        <img src="images/family-photo.jpg" alt="The Moreno family at La Finca de Villa"
+          style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,.16); object-fit: cover;">
+      </div>
+
+      <!-- Text -->
+      <div>
+        <span class="section-label">Our Family</span>
+        <h2 style="margin: .5rem 0 1.25rem;">More than a restaurant — it's familia</h2>
+        <p style="margin-bottom: 2rem; color: #333333;">
+          Ruben Moreno brought his family's recipes from Juárez, Chihuahua to the mountains of New Mexico. His daughter Itzel joined him, and together they've built more than a restaurant — a welcoming place where every guest feels at home.
+        </p>
+        <a href="/our-story" class="btn-text-red">Meet the Team &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--
+  Tablet/Mobile breakpoint: grid-template-columns: 1fr (stack vertically)
+  Image goes on top, text below.
+
+  CLASS: btn-text-red  (text-only button for light backgrounds)
+    Background: None
+    Color: Red (#CE1126)
+    Font: Lato 700, 0.875rem, uppercase
+    Hover Color: Red Dark (#A80D1E)
+    Padding: 0
+-->
+
+
+<!-- ============================================================
+     SECTION 7 — SOCIAL CTA  (dark green background)
+     ============================================================ -->
+
+<section style="background: #004D35; padding: 4rem 0; text-align: center;">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 0 1.5rem;">
+
+    <h2 style="color: #FFFFFF; margin-bottom: .5rem;">Follow La Finca de Villa</h2>
+    <p style="color: #F0FAF5; margin: 0 auto 2rem; max-width: 68ch;">
+      See the latest dishes, daily specials, and mountain moments on social media.
+    </p>
+
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+
+      <a href="https://www.instagram.com/lafincadevilla/" target="_blank" rel="noopener noreferrer"
+         style="display: inline-flex; align-items: center; gap: .6rem; padding: .85rem 1.75rem;
+                border-radius: 8px; background: #E1306C; color: #fff;
+                font-family: 'Lato', sans-serif; font-weight: 700; font-size: .9rem;">
+        <i class="fab fa-instagram"></i> @lafincadevilla
+      </a>
+
+      <a href="https://www.facebook.com/profile.php?id=100083762870185" target="_blank" rel="noopener noreferrer"
+         style="display: inline-flex; align-items: center; gap: .6rem; padding: .85rem 1.75rem;
+                border-radius: 8px; background: #1877F2; color: #fff;
+                font-family: 'Lato', sans-serif; font-weight: 700; font-size: .9rem;">
+        <i class="fab fa-facebook-f"></i> La Finca de Villa
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!--
+  NOTE: For the social buttons in Webflow, build as Link Block elements:
+    CLASS: btn-instagram
+      Background: #E1306C
+      Hover: #C11F58
+
+    CLASS: btn-facebook
+      Background: #1877F2
+      Hover: #0D63D8
+-->
