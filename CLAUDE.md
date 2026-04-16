@@ -15,7 +15,7 @@ Building a Webflow website for La Finca de Villa (formerly Mi Cocina Mexicana), 
 
 ### Location 2 — Red River, NM
 - **Address**: 201 W. Main St. (inside Lifts West Condominium Resort Hotel), Red River, NM 87558
-- **Phone**: TBD (please provide)
+- **Phone**: (505) 780-0881
 - **Opened**: Christmas Eve, December 24, 2025
 
 ---
@@ -59,10 +59,20 @@ La Finca de Villa (formerly Mi Cocina Mexicana) is a family-owned Mexican restau
 ### Story / About Copy (Draft — based on Taos News article + known facts)
 > La Finca de Villa brings the warmth of a Mexican family kitchen to the mountains of northern New Mexico. Owner Ruben Moreno grew up in Juárez, Chihuahua, learning authentic recipes from his mother — who ran her own restaurant in Mexico. He brought those flavors north when he opened his first location in Angel Fire in 2022, and in 2025 expanded to Red River. Every dish reflects the culinary heritage of both Northern and Southern Mexico: fresh, homemade, and made with heart.
 
-### Tagline (from Mi Cocina era)
-> "South of the border dining"
+### Tagline — New Options for La Finca de Villa
 
-*(Confirm whether this carries over to La Finca de Villa branding)*
+The Mi Cocina Mexicana tagline "South of the border dining" is retired with the rebrand.
+Proposed taglines for La Finca de Villa (select one or mix for different uses):
+
+| Option | Tagline | Best Use |
+|--------|---------|----------|
+| **#1 — Recommended** | **"Where the mountains meet Mexico"** | Primary tagline — hero section, signage, SEO |
+| #2 | "Rooted in tradition. Made with love." | About page, storytelling |
+| #3 | "From our familia to yours" | Social media, community marketing |
+| #4 | "Mountain fresh. Mexican soul." | Short-form: social cards, ads |
+| #5 | "Authentic flavors in the heart of the mountains" | Long-form descriptions |
+
+**Recommendation**: Use **"Where the mountains meet Mexico"** as the primary tagline. It instantly communicates both the unique mountain resort setting (Angel Fire / Red River) and the authentic Mexican heritage — differentiating La Finca de Villa from generic Mexican chains while appealing to the resort/ski tourist audience.
 
 ---
 
@@ -87,8 +97,24 @@ La Finca de Villa (formerly Mi Cocina Mexicana) is a family-owned Mexican restau
 Warm, family-friendly, authentic, rustic, welcoming — "home cooking from a Mexican family kitchen"
 
 ### Photography / Images
-- TBD — please provide food photos, interior/exterior shots
-- Menu image assets available from Mi Cocina Mexicana (provided)
+
+**Provided (Round 1):**
+| File | Subject | Use |
+|------|---------|-----|
+| beef-fajitas.jpg | Beef fajitas on sizzling cast iron skillet with bell peppers & onions; side of rice, beans, guacamole, pico, sour cream | Hero image candidate, Fajitas menu section |
+| cocktails.jpg | Classic margarita on rocks (lime, salt rim) + frozen strawberry margarita (sugar rim, lemon) on rustic wood table | Drinks section, Hero section lifestyle |
+| beers.jpg | Coors Light, Modelo Negra, Corona Extra, Dos Equis, Modelo Especial on rustic wood table | Drinks/Bar section |
+| taquitos.jpg | Crispy taquitos with green tomatillo sauce, sour cream drizzle, avocado slices, pico de gallo, rice and refried beans | Appetizers / A La Carte section |
+| shrimp-fajitas.jpg | Shrimp fajitas on cast iron with melted white cheese, grilled veggies; side of rice, beans, guacamole, pico | Fajitas menu section |
+
+**Drinks confirmed from photos:**
+- Margaritas (classic and frozen/flavored)
+- Coors Light, Modelo Negra, Modelo Especial, Corona Extra, Dos Equis (XX)
+
+**Still needed:**
+- Interior/exterior photos of both locations
+- Additional food photography (enchiladas, desserts, kids meals, etc.)
+- Menu image assets from Mi Cocina Mexicana era (provided separately)
 
 ---
 
@@ -295,16 +321,17 @@ Warm, family-friendly, authentic, rustic, welcoming — "home cooking from a Mex
 ---
 
 ## What Still Needs to Be Provided
-1. Red River phone number
-2. Confirmation of tagline for La Finca de Villa branding (keep "South of the border dining" or new tagline?)
-3. High-res food photography and interior/exterior shots
-4. Year officially rebranded from Mi Cocina Mexicana to La Finca de Villa
+1. ~~Red River phone number~~ — **(505) 780-0881 ✓**
+2. ~~Tagline~~ — **New taglines developed ✓** (see Brand section above for options)
+3. ~~Rebranding year~~ — **January 2026 ✓**
+4. Interior/exterior photos of both locations (more food photos welcome)
 5. Whether the old Mi Cocina Mexicana Facebook page is being updated to La Finca de Villa name
-6. Any additional menu items or price updates since the rebrand
+6. Any menu price updates or new items since the January 2026 rebrand
 7. Google Business listing (to claim and update)
 8. Online ordering / reservation platform preference (if any)
 9. Payment methods accepted
 10. Catering/delivery availability
+11. Drinks menu — margarita flavors, prices, any cocktail specials; beer prices
 
 ---
 
@@ -318,10 +345,12 @@ Warm, family-friendly, authentic, rustic, welcoming — "home cooking from a Mex
 - Yelp (Mi Cocina, Angel Fire): 37 reviews — 12 Crestview Dr, Angel Fire, NM 87710
 
 ## Context Notes
-- La Finca de Villa is the rebrand of Mi Cocina Mexicana (same ownership, same locations, same menu)
+- La Finca de Villa is the January 2026 rebrand of Mi Cocina Mexicana (same ownership, same locations, same menu)
 - Red River location opened inside Lifts West Condominium Resort Hotel on Christmas Eve 2025
 - Angel Fire location is the original, established 2022
 - Proprietor Ruben Moreno grew up in Juárez, Chihuahua; parents from Puebla, Mexico
 - Daughter Itzel Moreno (UNM accounting graduate) co-manages operations
 - Menu reflects both Northern and Southern Mexican culinary traditions
+- Drinks offered: Margaritas (classic + frozen/flavored), Coors Light, Modelo Negra, Modelo Especial, Corona Extra, Dos Equis
 - Neighboring competition in Angel Fire: El Jefe Margaritas y Mas, Mikuna Grill, Zeb's Restaurant & Bar
+- Target audience: Mountain resort visitors (ski season + summer), Angel Fire and Red River locals
